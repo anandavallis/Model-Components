@@ -1,0 +1,44 @@
+/* App.css */
+
+/* Apply a smooth transition globally */
+* {
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+/* Smooth scroll behavior for modal interactions */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Body base style */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafb; /* Light gray from Tailwind's gray-50 */
+  color: #1f2937; /* Tailwind gray-800 */
+}
+
+/* Remove default button styling for better control with Tailwind */
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Modal fade-in animation (optional) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-enter {
+  animation: fadeIn 0.2s ease-out;
+}
